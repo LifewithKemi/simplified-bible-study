@@ -24,9 +24,13 @@ jobs:
         with:
           node-version: 22
 
-      - run: npm install
+      - name: Install dependencies
+        run: |
+          npm install
+          npm install vite @vitejs/plugin-react --save-dev
 
-      - run: ./node_modules/.bin/vite build
+      - name: Build
+        run: ./node_modules/.bin/vite build
 
       - uses: actions/upload-pages-artifact@v3
         with:

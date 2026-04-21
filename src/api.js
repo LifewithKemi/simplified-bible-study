@@ -1,6 +1,6 @@
 const GEMINI_API_KEY = 'AIzaSyAI76t6b7k7pWZ2TZJyB6roDpFRR2OGZe8'
 
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`
+const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`
 
 export async function searchScriptures(topic) {
   const prompt = `You are a biblical scholar, pastor, and Bible study teacher. A person is searching for scriptures on the topic: "${topic}".

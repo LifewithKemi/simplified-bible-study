@@ -1,0 +1,11 @@
+{
+  "name": "simplified-bible-study",
+  "version": "1.0.0",
+  "description": "Simplified Bible Study - AI-powered scripture search",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}

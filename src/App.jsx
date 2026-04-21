@@ -58,7 +58,12 @@ export default function App() {
       {/* HEADER */}
       <header className="header">
         <a className="header-logo" href="/" onClick={() => { setResults(null); setQuery(''); }}>
-          <CrossIcon className="header-cross" />
+          <img
+  className="header-brand-mark"
+  src="./public/softlifewithkemi-logo.png"
+  alt="SoftLifeWithKemi logo"
+/>
+
           <span className="header-title">The Soft Life <span>Bible</span> Study</span>
         </a>
         <nav>

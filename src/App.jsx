@@ -59,7 +59,7 @@ export default function App() {
       <header className="header">
         <a className="header-logo" href="/" onClick={() => { setResults(null); setQuery(''); }}>
           <CrossIcon className="header-cross" />
-          <span className="header-title">Simplified <span>Bible</span> Study</span>
+          <span className="header-title">The Soft Life <span>Bible</span> Study</span>
         </a>
         <nav>
           <ul className="header-nav">
@@ -185,7 +185,7 @@ export default function App() {
       {/* FOOTER */}
       <footer className="footer">
         <p>
-          Simplified Bible Study · Built to bring God's Word closer to everyday life<br />
+          The Soft Life Bible Study · Built to bring God's Word closer to everyday life<br />
           Scripture versions: NKJV · AMP · TPT · MSG · NLT<br />
           <span style={{ color: 'var(--text-dim)', fontSize: 11 }}>
             Powered by Claude AI · Always verify scriptures with your own Bible

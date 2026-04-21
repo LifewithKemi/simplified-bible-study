@@ -1,6 +1,5 @@
-const GEMINI_API_KEY = 'AIzaSyBTKDXJDIYs3LsIObJJD8cpc5c8BtSgA9Y'
-
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`
+const GROQ_API_KEY = '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'
+const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions'
 
 export async function searchScriptures(topic) {
   const prompt = `You are a biblical scholar, pastor, and Bible study teacher. A person is searching for scriptures on the topic: "${topic}".
@@ -29,23 +28,28 @@ Return a JSON object (ONLY raw JSON, no markdown, no backticks, no preamble) wit
 Return exactly 4 scriptures. Mix Old and New Testament.`
 
   try {
-    const response = await fetch(GEMINI_URL, {
+    const response = await fetch(GROQ_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${GROQ_API_KEY}`
+      },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { temperature: 0.7, maxOutputTokens: 5000 }
+        model: 'llama-3.3-70b-versatile',
+        messages: [{ role: 'user', content: prompt }],
+        temperature: 0.7,
+        max_tokens: 5000
       })
     })
 
     if (!response.ok) {
       const err = await response.json()
-      console.error('Gemini error:', err)
+      console.error('Groq error:', err)
       throw new Error(`API error: ${response.status}`)
     }
 
     const data = await response.json()
-    const raw = data.candidates?.[0]?.content?.parts?.[0]?.text || ''
+    const raw = data.choices?.[0]?.message?.content || ''
     const clean = raw.replace(/```json|```/g, '').trim()
     return JSON.parse(clean)
   } catch (err) {

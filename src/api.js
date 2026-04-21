@@ -1,4 +1,4 @@
-const GROQ_API_KEY = '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'
+const GROQ_API_KEY = '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'
 const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions'
 
 export async function searchScriptures(topic) {

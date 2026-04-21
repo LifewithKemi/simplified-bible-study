@@ -44,7 +44,7 @@ export default function ScriptureCard({ scripture }) {
           onClick={() => setStudyOpen(!studyOpen)}
         >
           <span>Open Study Guide</span>
-          <ChevronIcon className="chevron" style={{ width: 16, height: 16 }} />
+          <ChevronIcon className="chevron" style={{ width: 12, height: 12 }} />
         </button>
 
         <div className={`study-body ${studyOpen ? 'open' : ''}`}>

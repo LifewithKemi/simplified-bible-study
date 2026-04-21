@@ -193,7 +193,7 @@ export default function App() {
           The Soft Life Bible Study · Built to bring God's Word closer to everyday life<br />
           Scripture versions: NKJV · AMP · TPT · MSG · NLT<br />
           <span style={{ color: 'var(--text-dim)', fontSize: 11 }}>
-            Powered by The SoftLife with Kemi · Always verify scriptures with your own Bible
+            Copyright 2026 -Powered by The SoftLife with Kemi · Always verify scriptures with your own Bible
           </span>
         </p>
       </footer>

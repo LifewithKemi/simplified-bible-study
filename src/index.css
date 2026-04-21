@@ -621,3 +621,8 @@ body::before {
   .search-container, .topics-section { margin-left: 1.25rem; margin-right: 1.25rem; max-width: none; }
   .submit-input-row { flex-direction: column; }
 }
+@media (max-width: 600px) {
+  .header-brand-mark {
+    width: 72px;
+  }
+}

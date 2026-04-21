@@ -58,12 +58,7 @@ export default function App() {
       {/* HEADER */}
       <header className="header">
         <a className="header-logo" href="/" onClick={() => { setResults(null); setQuery(''); }}>
-          <img
-  className="header-brand-mark"
-  src="./public/softlifewithkemi-logo.png"
-  alt="SoftLifeWithKemi logo"
-/>
-
+          <CrossIcon className="header-cross" />
           <span className="header-title">The Soft Life <span>Bible</span> Study</span>
         </a>
         <nav>
@@ -193,7 +188,7 @@ export default function App() {
           The Soft Life Bible Study · Built to bring God's Word closer to everyday life<br />
           Scripture versions: NKJV · AMP · TPT · MSG · NLT<br />
           <span style={{ color: 'var(--text-dim)', fontSize: 11 }}>
-            Copyright 2026 -Powered by The SoftLife with Kemi · Always verify scriptures with your own Bible
+            Copyright 2026 · Powered by The SoftLife with Kemi · Always verify scriptures with your own Bible
           </span>
         </p>
       </footer>

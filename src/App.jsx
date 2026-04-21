@@ -1,3 +1,6 @@
+Paste this in as your full `App.jsx` file. This fixes the top title so clicking it returns to the homepage/top instead of `/`.
+
+```jsx
 import { useState, useRef } from 'react'
 import { CrossIcon, BookIcon } from './components/Icons.jsx'
 import ScriptureCard from './components/ScriptureCard.jsx'
@@ -54,10 +57,17 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div id="top">
       {/* HEADER */}
       <header className="header">
-        <a className="header-logo" href="/" onClick={() => { setResults(null); setQuery(''); }}>
+        <a
+          className="header-logo"
+          href="#top"
+          onClick={() => {
+            setResults(null)
+            setQuery('')
+          }}
+        >
           <CrossIcon className="header-cross" />
           <span className="header-title">The Soft Life <span>Bible</span> Study</span>
         </a>
@@ -195,3 +205,4 @@ export default function App() {
     </div>
   )
 }
+```

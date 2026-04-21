@@ -1,6 +1,3 @@
-Paste this in as your full `App.jsx` file. This fixes the top title so clicking it returns to the homepage/top instead of `/`.
-
-```jsx
 import { useState, useRef } from 'react'
 import { CrossIcon, BookIcon } from './components/Icons.jsx'
 import ScriptureCard from './components/ScriptureCard.jsx'
@@ -205,4 +202,3 @@ export default function App() {
     </div>
   )
 }
-```
